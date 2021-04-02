@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF605B8B2616B64600AF818C /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF605B8A2616B64600AF818C /* DummyData.swift */; };
+		BF605B972617188900AF818C /* RealTimeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF605B962617188900AF818C /* RealTimeDataHandler.swift */; };
 		BFCAB18D26117AEE00FB8CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB18C26117AEE00FB8CAA /* AppDelegate.swift */; };
 		BFCAB18F26117AEE00FB8CAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB18E26117AEE00FB8CAA /* SceneDelegate.swift */; };
 		BFCAB19126117AEE00FB8CAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB19026117AEE00FB8CAA /* ViewController.swift */; };
@@ -15,6 +17,12 @@
 		BFCAB19926117AEE00FB8CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCAB19726117AEE00FB8CAA /* LaunchScreen.storyboard */; };
 		BFCAB1A426117AEF00FB8CAA /* iOSInfoChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1A326117AEF00FB8CAA /* iOSInfoChartTests.swift */; };
 		BFCAB1AF26117AEF00FB8CAA /* iOSInfoChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1AE26117AEF00FB8CAA /* iOSInfoChartUITests.swift */; };
+		BFCAB1D5261197B900FB8CAA /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1D4261197B900FB8CAA /* ViewPortHandler.swift */; };
+		BFCAB1DD26119A4000FB8CAA /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1DC26119A4000FB8CAA /* Transformer.swift */; };
+		BFCAB1EB2611C15F00FB8CAA /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1EA2611C15F00FB8CAA /* Spec.swift */; };
+		BFCAB1F82612C8FA00FB8CAA /* VitalChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1F72612C8FA00FB8CAA /* VitalChartDataProvider.swift */; };
+		BFCAB1FD2612CC7800FB8CAA /* RealTimeVitalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB1FC2612CC7800FB8CAA /* RealTimeVitalRenderer.swift */; };
+		BFCAB2162613222600FB8CAA /* RealTimeVitalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB2152613222600FB8CAA /* RealTimeVitalChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF605B8A2616B64600AF818C /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		BF605B962617188900AF818C /* RealTimeDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeDataHandler.swift; sourceTree = "<group>"; };
 		BFCAB18926117AEE00FB8CAA /* iOSInfoChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSInfoChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCAB18C26117AEE00FB8CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCAB18E26117AEE00FB8CAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,13 +52,19 @@
 		BFCAB19326117AEE00FB8CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFCAB19526117AEE00FB8CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFCAB19826117AEE00FB8CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BFCAB19A26117AEE00FB8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFCAB19A26117AEE00FB8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		BFCAB19F26117AEF00FB8CAA /* iOSInfoChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSInfoChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCAB1A326117AEF00FB8CAA /* iOSInfoChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSInfoChartTests.swift; sourceTree = "<group>"; };
 		BFCAB1A526117AEF00FB8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFCAB1AA26117AEF00FB8CAA /* iOSInfoChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSInfoChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCAB1AE26117AEF00FB8CAA /* iOSInfoChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSInfoChartUITests.swift; sourceTree = "<group>"; };
 		BFCAB1B026117AEF00FB8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFCAB1D4261197B900FB8CAA /* ViewPortHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPortHandler.swift; sourceTree = "<group>"; };
+		BFCAB1DC26119A4000FB8CAA /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
+		BFCAB1EA2611C15F00FB8CAA /* Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
+		BFCAB1F72612C8FA00FB8CAA /* VitalChartDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalChartDataProvider.swift; sourceTree = "<group>"; };
+		BFCAB1FC2612CC7800FB8CAA /* RealTimeVitalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeVitalRenderer.swift; sourceTree = "<group>"; };
+		BFCAB2152613222600FB8CAA /* RealTimeVitalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeVitalChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF605B8F2616BE2E00AF818C /* DummyData */ = {
+			isa = PBXGroup;
+			children = (
+				BF605B8A2616B64600AF818C /* DummyData.swift */,
+			);
+			path = DummyData;
+			sourceTree = "<group>";
+		};
 		BFCAB18026117AEE00FB8CAA = {
 			isa = PBXGroup;
 			children = (
 				BFCAB18B26117AEE00FB8CAA /* iOSInfoChart */,
+				BFCAB1C326117E7F00FB8CAA /* Resources */,
+				BFCAB1C426117ECE00FB8CAA /* Supporting Files */,
+				BFCAB18A26117AEE00FB8CAA /* Products */,
 				BFCAB1A226117AEF00FB8CAA /* iOSInfoChartTests */,
 				BFCAB1AD26117AEF00FB8CAA /* iOSInfoChartUITests */,
-				BFCAB18A26117AEE00FB8CAA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +127,8 @@
 			children = (
 				BFCAB18C26117AEE00FB8CAA /* AppDelegate.swift */,
 				BFCAB18E26117AEE00FB8CAA /* SceneDelegate.swift */,
-				BFCAB19026117AEE00FB8CAA /* ViewController.swift */,
-				BFCAB19226117AEE00FB8CAA /* Main.storyboard */,
-				BFCAB19526117AEE00FB8CAA /* Assets.xcassets */,
-				BFCAB19726117AEE00FB8CAA /* LaunchScreen.storyboard */,
-				BFCAB19A26117AEE00FB8CAA /* Info.plist */,
+				BFCAB1C526117EEE00FB8CAA /* DemoController */,
+				BFCAB1CC26117F8600FB8CAA /* Sources */,
 			);
 			path = iOSInfoChart;
 			sourceTree = "<group>";
@@ -126,6 +149,103 @@
 				BFCAB1B026117AEF00FB8CAA /* Info.plist */,
 			);
 			path = iOSInfoChartUITests;
+			sourceTree = "<group>";
+		};
+		BFCAB1C326117E7F00FB8CAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB19226117AEE00FB8CAA /* Main.storyboard */,
+				BFCAB19526117AEE00FB8CAA /* Assets.xcassets */,
+				BFCAB19726117AEE00FB8CAA /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFCAB1C426117ECE00FB8CAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB19A26117AEE00FB8CAA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFCAB1C526117EEE00FB8CAA /* DemoController */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB19026117AEE00FB8CAA /* ViewController.swift */,
+			);
+			path = DemoController;
+			sourceTree = "<group>";
+		};
+		BFCAB1CC26117F8600FB8CAA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB1CD26117FAF00FB8CAA /* Chart */,
+				BFCAB1CE26117FC000FB8CAA /* Data */,
+				BFCAB1CF26117FCA00FB8CAA /* DataProviders */,
+				BFCAB1D026117FE100FB8CAA /* Handler */,
+				BFCAB1D126117FED00FB8CAA /* Renderer */,
+				BFCAB1D22611800500FB8CAA /* Thread */,
+				BFCAB1D32611800E00FB8CAA /* Utils */,
+				BF605B8F2616BE2E00AF818C /* DummyData */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BFCAB1CD26117FAF00FB8CAA /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB2152613222600FB8CAA /* RealTimeVitalChartView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		BFCAB1CE26117FC000FB8CAA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB1EA2611C15F00FB8CAA /* Spec.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BFCAB1CF26117FCA00FB8CAA /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB1F72612C8FA00FB8CAA /* VitalChartDataProvider.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		BFCAB1D026117FE100FB8CAA /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				BF605B962617188900AF818C /* RealTimeDataHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		BFCAB1D126117FED00FB8CAA /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB1FC2612CC7800FB8CAA /* RealTimeVitalRenderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		BFCAB1D22611800500FB8CAA /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		BFCAB1D32611800E00FB8CAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BFCAB1D4261197B900FB8CAA /* ViewPortHandler.swift */,
+				BFCAB1DC26119A4000FB8CAA /* Transformer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +380,14 @@
 			files = (
 				BFCAB19126117AEE00FB8CAA /* ViewController.swift in Sources */,
 				BFCAB18D26117AEE00FB8CAA /* AppDelegate.swift in Sources */,
+				BFCAB1EB2611C15F00FB8CAA /* Spec.swift in Sources */,
+				BF605B972617188900AF818C /* RealTimeDataHandler.swift in Sources */,
+				BFCAB1FD2612CC7800FB8CAA /* RealTimeVitalRenderer.swift in Sources */,
+				BFCAB1D5261197B900FB8CAA /* ViewPortHandler.swift in Sources */,
+				BFCAB1DD26119A4000FB8CAA /* Transformer.swift in Sources */,
+				BFCAB1F82612C8FA00FB8CAA /* VitalChartDataProvider.swift in Sources */,
+				BFCAB2162613222600FB8CAA /* RealTimeVitalChartView.swift in Sources */,
+				BF605B8B2616B64600AF818C /* DummyData.swift in Sources */,
 				BFCAB18F26117AEE00FB8CAA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +566,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D7CT6JDMJ;
-				INFOPLIST_FILE = iOSInfoChart/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +586,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3D7CT6JDMJ;
-				INFOPLIST_FILE = iOSInfoChart/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
