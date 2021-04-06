@@ -42,10 +42,11 @@ open class RealTimeVitalRenderer {
     
     
     open func updateSetting() {
+        
         guard let dataProvider = dataProvider else { return }
         
         drawPointer = 0
-        removePointer = dataProvider.totalRanageCount - (dataProvider.totalRanageCount * (1 - Int(dataProvider.refreshGraphInterval)))
+        removePointer = dataProvider.totalRanageCount - Int((Double(dataProvider.totalRanageCount) * (1.0 - dataProvider.refreshGraphInterval)))
     }
     
     
@@ -64,9 +65,11 @@ open class RealTimeVitalRenderer {
     }
     
     open func drawLinear(context: CGContext) {
+        
         guard let dataProvider = dataProvider else { return }
         
         context.saveGState()
+        defer { context.restoreGState() }
         
         let valueToPixelMatrix = trans.valueToPixelMatrix
         
@@ -78,17 +81,17 @@ open class RealTimeVitalRenderer {
         var firstPoint = true
         
         let path = CGMutablePath()
-        for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
+        for x in stride(from: 0, to: dataProvider.totalRanageCount, by: 1) {
             firstY = dataProvider.realTimeData[x == 0 ? 0 : x - 1]
             secondY = dataProvider.realTimeData[x]
             removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
             
             // change to empty data
             if (firstY == -9999 || secondY == -9999){ continue }
-            
+
             let startPoint =
-                CGPoint(x: CGFloat(x == 0 ? 0 : x - 1),
-                        y: CGFloat(firstY))
+                CGPoint(x: CGFloat(x == 0 ? 0 : x - 1) * 0.2,
+                        y: CGFloat(firstY) * -100 + 300)
                 .applying(valueToPixelMatrix)
             
             if firstPoint {
@@ -100,18 +103,15 @@ open class RealTimeVitalRenderer {
             
             let endPoint =
                 CGPoint(
-                    x: CGFloat(x),
-                    y: CGFloat(secondY))
+                    x: CGFloat(x) * 0.2,
+                    y: CGFloat(secondY) * -100 + 300)
                 .applying(valueToPixelMatrix)
             path.addLine(to: endPoint)
-            
-            
         }
-        if !firstPoint
-        {
-            print(path)
+        if !firstPoint {
             context.beginPath()
             context.addPath(path)
+            context.setLineWidth(CGFloat(2))
             context.setStrokeColor(CGColor(red: 1.0, green: 0, blue: 0, alpha: 1))
             context.strokePath()
         }

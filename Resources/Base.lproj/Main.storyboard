@@ -21,12 +21,21 @@
                                 <rect key="frame" x="20" y="64" width="335" height="583"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-Sj-JIX">
+                                <rect key="frame" x="155.5" y="622" width="64" height="30"/>
+                                <state key="normal" title="Add Data"/>
+                                <connections>
+                                    <action selector="addDataButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnV-NH-7cR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OSC-md-BeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7Ej-XR-6PT"/>
+                            <constraint firstItem="BtP-Sj-JIX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9YV-u0-hxC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OSC-md-BeN" secondAttribute="trailing" constant="20" id="CYh-zN-OOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BtP-Sj-JIX" secondAttribute="bottom" constant="15" id="KxG-Mm-UGZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSC-md-BeN" secondAttribute="bottom" constant="20" id="Lr8-4U-GAf"/>
                             <constraint firstItem="OSC-md-BeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OoD-Z9-ACq"/>
                         </constraints>

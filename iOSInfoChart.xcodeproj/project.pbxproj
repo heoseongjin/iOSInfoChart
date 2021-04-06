@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4D59A7261B337B00EBFA53 /* RealTimeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D59A6261B337B00EBFA53 /* RealTimeDataHandler.swift */; };
+		BF4D59AF261B349900EBFA53 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D59AE261B349900EBFA53 /* Queue.swift */; };
 		BF605B8B2616B64600AF818C /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF605B8A2616B64600AF818C /* DummyData.swift */; };
-		BF605B972617188900AF818C /* RealTimeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF605B962617188900AF818C /* RealTimeDataHandler.swift */; };
 		BFCAB18D26117AEE00FB8CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB18C26117AEE00FB8CAA /* AppDelegate.swift */; };
 		BFCAB18F26117AEE00FB8CAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB18E26117AEE00FB8CAA /* SceneDelegate.swift */; };
 		BFCAB19126117AEE00FB8CAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAB19026117AEE00FB8CAA /* ViewController.swift */; };
@@ -43,8 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4D59A6261B337B00EBFA53 /* RealTimeDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeDataHandler.swift; sourceTree = "<group>"; };
+		BF4D59AE261B349900EBFA53 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		BF605B8A2616B64600AF818C /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
-		BF605B962617188900AF818C /* RealTimeDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeDataHandler.swift; sourceTree = "<group>"; };
 		BFCAB18926117AEE00FB8CAA /* iOSInfoChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSInfoChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCAB18C26117AEE00FB8CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCAB18E26117AEE00FB8CAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF4D59A5261B32F800EBFA53 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				BF4D59A6261B337B00EBFA53 /* RealTimeDataHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		BF605B8F2616BE2E00AF818C /* DummyData */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +193,7 @@
 				BFCAB1CD26117FAF00FB8CAA /* Chart */,
 				BFCAB1CE26117FC000FB8CAA /* Data */,
 				BFCAB1CF26117FCA00FB8CAA /* DataProviders */,
-				BFCAB1D026117FE100FB8CAA /* Handler */,
+				BF4D59A5261B32F800EBFA53 /* Handler */,
 				BFCAB1D126117FED00FB8CAA /* Renderer */,
 				BFCAB1D22611800500FB8CAA /* Thread */,
 				BFCAB1D32611800E00FB8CAA /* Utils */,
@@ -216,14 +226,6 @@
 			path = DataProviders;
 			sourceTree = "<group>";
 		};
-		BFCAB1D026117FE100FB8CAA /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-				BF605B962617188900AF818C /* RealTimeDataHandler.swift */,
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
 		BFCAB1D126117FED00FB8CAA /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +246,7 @@
 			children = (
 				BFCAB1D4261197B900FB8CAA /* ViewPortHandler.swift */,
 				BFCAB1DC26119A4000FB8CAA /* Transformer.swift */,
+				BF4D59AE261B349900EBFA53 /* Queue.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -381,10 +384,11 @@
 				BFCAB19126117AEE00FB8CAA /* ViewController.swift in Sources */,
 				BFCAB18D26117AEE00FB8CAA /* AppDelegate.swift in Sources */,
 				BFCAB1EB2611C15F00FB8CAA /* Spec.swift in Sources */,
-				BF605B972617188900AF818C /* RealTimeDataHandler.swift in Sources */,
+				BF4D59A7261B337B00EBFA53 /* RealTimeDataHandler.swift in Sources */,
 				BFCAB1FD2612CC7800FB8CAA /* RealTimeVitalRenderer.swift in Sources */,
 				BFCAB1D5261197B900FB8CAA /* ViewPortHandler.swift in Sources */,
 				BFCAB1DD26119A4000FB8CAA /* Transformer.swift in Sources */,
+				BF4D59AF261B349900EBFA53 /* Queue.swift in Sources */,
 				BFCAB1F82612C8FA00FB8CAA /* VitalChartDataProvider.swift in Sources */,
 				BFCAB2162613222600FB8CAA /* RealTimeVitalChartView.swift in Sources */,
 				BF605B8B2616B64600AF818C /* DummyData.swift in Sources */,

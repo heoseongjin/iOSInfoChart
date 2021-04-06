@@ -24,7 +24,8 @@ open class Transformer: NSObject
     
     open func valuesToPixel(_ points: inout [CGPoint])
     {
-        points = points.map { $0.applying(valueToPixelMatrix) }
+        points = points.map { $0.applying(valueMatrix) }
+        points = points.map { $0.applying(offsetMatrix) }
     }
     
     open func initValueMatrix(chartXMin: Double, deltaX: CGFloat, deltaY: CGFloat, chartYMin: Double)
@@ -33,17 +34,16 @@ open class Transformer: NSObject
         let scaleY = (viewPortHandler.chartHeight / deltaY)
 
         // setup all matrixes
-        valueMatrix.translatedBy(x: CGFloat(-chartXMin), y: CGFloat(-chartYMin))
         valueMatrix.scaledBy(x: scaleX, y: -scaleY)
+        valueMatrix.translatedBy(x: CGFloat(-chartXMin), y: CGFloat(-chartYMin))
     }
     
     open func initOffsetMatrix() {
         offsetMatrix.translatedBy(x: viewPortHandler.offsetLeft, y: viewPortHandler.chartHeight - viewPortHandler.offsetBottom)
     }
     
-    open var valueToPixelMatrix: CGAffineTransform{
+    open var valueToPixelMatrix: CGAffineTransform {
         return valueMatrix.concatenating(offsetMatrix)
     }
     
 }
-

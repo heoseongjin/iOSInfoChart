@@ -69,6 +69,9 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         valueCircleIndicatorColor = UIColor.red
         valueCircleIndicatorRadius = 10
         
+        //
+        setNeedsDisplay()
+        
         transformer = Transformer(viewPortHandler: viewPortHandler)
         realTimeVitalRenderer = RealTimeVitalRenderer(dataProvider: self)
         //datahandler
@@ -78,13 +81,12 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     
     open override func draw(_ rect: CGRect)
     {
-        super.draw(rect)
-
-        guard let realTimeVitalRenderer = realTimeVitalRenderer else { return }
+        settingTransformer()
+        
+        guard let renderer = realTimeVitalRenderer else { return }
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        realTimeVitalRenderer.drawLinear(context: context)
-        setNeedsDisplay()
+        renderer.drawLinear(context: context)
     }
     
     public func setRealTimeSpec(spec: Spec) {
@@ -103,19 +105,25 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         
         guard let realTimeVitalRenderer = realTimeVitalRenderer else { return }
         
-        print("value: \(value)")
+        realTimeVitalRenderer.readyForUpdateData()
         
         realTimeData[realTimeVitalRenderer.drawPointer] = value
         realTimeData[realTimeVitalRenderer.removePointer] = EMPTY_DATA
+        
+        setNeedsDisplay()
+        
+//        print("value: \(value)")
+//        print("realTimeVitalRenderer.drawPointer: \(realTimeVitalRenderer.drawPointer)")
+//        print("realTimeVitalRenderer.removePointer: \(realTimeVitalRenderer.removePointer)")
     }
     
     private func settingTransformer() {
         guard let transformer = transformer else { return }
         transformer.initOffsetMatrix()
         transformer.initValueMatrix(chartXMin: 0,
-                                    deltaX: CGFloat(spec.vitalMinValue),
-                                    deltaY: CGFloat(spec.oneSecondDataCount * spec.visibleSecondRange),
-                                    chartYMin: spec.vitalMaxValue - spec.vitalMinValue)
+                                    deltaX: CGFloat(spec.oneSecondDataCount * spec.visibleSecondRange),
+                                    deltaY: CGFloat(spec.vitalMaxValue - spec.vitalMinValue),
+                                    chartYMin: spec.vitalMinValue)
     }
     
     private func resetRealTimeData() {
