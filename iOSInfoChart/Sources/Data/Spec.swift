@@ -10,7 +10,7 @@ import Foundation
 public class Spec {
     
     /// 1초 동안 들어오는 데이터 개수
-    private var _oneSecondDataCount: Int = 100
+    private var _oneSecondDataCount: Int = 500
     
     /// 보여질 X축 범위 (초 단위)
     private var _visibleSecondRange: Int = 5

@@ -23,7 +23,7 @@ public protocol VitalChartDataProvider {
     
     var lineColor: UIColor { get set }
     
-    var lineWidth: Double { get set }
+    var lineWidth: CGFloat { get set }
 
 //    RealTimeVitalChart.LineMode getLineMode();
 

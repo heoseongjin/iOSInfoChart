@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSC-md-BeN" customClass="RealTimeVitalChartView" customModule="iOSInfoChart" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="423"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-Sj-JIX">
@@ -38,11 +38,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OSC-md-BeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7Ej-XR-6PT"/>
+                            <constraint firstItem="OSC-md-BeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7Ej-XR-6PT"/>
                             <constraint firstItem="BtP-Sj-JIX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9YV-u0-hxC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OSC-md-BeN" secondAttribute="trailing" id="CYh-zN-OOW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BtP-Sj-JIX" secondAttribute="bottom" constant="15" id="KxG-Mm-UGZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSC-md-BeN" secondAttribute="bottom" constant="20" id="Lr8-4U-GAf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSC-md-BeN" secondAttribute="bottom" constant="100" id="Lr8-4U-GAf"/>
                             <constraint firstItem="BtP-Sj-JIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MH7-7S-rnT"/>
                             <constraint firstItem="OSC-md-BeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OoD-Z9-ACq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BtP-Sj-JIX" secondAttribute="trailing" constant="16" id="VBR-It-z1C"/>

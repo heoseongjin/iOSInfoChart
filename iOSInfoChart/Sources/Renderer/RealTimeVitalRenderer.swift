@@ -49,7 +49,6 @@ open class RealTimeVitalRenderer {
         removePointer = dataProvider.totalRanageCount - Int((Double(dataProvider.totalRanageCount) * (1.0 - dataProvider.refreshGraphInterval)))
     }
     
-    
     open func readyForUpdateData() {
         guard let dataProvider = dataProvider else { return }
         
@@ -81,13 +80,17 @@ open class RealTimeVitalRenderer {
         var firstPoint = true
         
         let path = CGMutablePath()
-        for x in stride(from: 0, to: dataProvider.totalRanageCount, by: 1) {
+        
+        for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
             firstY = dataProvider.realTimeData[x == 0 ? 0 : x - 1]
             secondY = dataProvider.realTimeData[x]
             removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
             
             // change to empty data
-            if (firstY == -9999 || secondY == -9999){ continue }
+            if (firstY == -9999 || secondY == -9999){
+                firstPoint = true
+                continue
+            }
 
             let startPoint =
                 CGPoint(x: CGFloat(x == 0 ? 0 : x - 1),
@@ -108,12 +111,15 @@ open class RealTimeVitalRenderer {
                 .applying(valueToPixelMatrix)
             path.addLine(to: endPoint)
         }
-        if !firstPoint {
-            context.beginPath()
-            context.addPath(path)
-            context.setLineWidth(CGFloat(2))
-            context.setStrokeColor(CGColor(red: 1.0, green: 0, blue: 0, alpha: 1))
-            context.strokePath()
+        
+        context.beginPath()
+        context.addPath(path)
+        context.setLineWidth(dataProvider.lineWidth)
+        context.setStrokeColor(dataProvider.lineColor.cgColor)
+        context.strokePath()
+        
+        if dataProvider.isEnabledValueCircleIndicator {
+            
         }
     }
 }

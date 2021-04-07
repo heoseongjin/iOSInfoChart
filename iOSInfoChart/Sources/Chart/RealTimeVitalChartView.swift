@@ -35,7 +35,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     public var lineColor: UIColor = UIColor()
     
     /// 차트 선 두께
-    public var lineWidth: Double = 1
+    public var lineWidth: CGFloat = CGFloat(1.0)
     
     /// 현재 값 인디케이터 활성 여부
     public var isEnabledValueCircleIndicator: Bool = true
@@ -63,7 +63,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
 
     private func initialize() {
         lineColor = UIColor.red
-        lineWidth = 5
+        lineWidth = CGFloat(1.0)
         
         isEnabledValueCircleIndicator = true
         valueCircleIndicatorColor = UIColor.red
@@ -81,6 +81,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     
     open override func draw(_ rect: CGRect)
     {
+        
         guard let renderer = realTimeVitalRenderer else { return }
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
@@ -109,10 +110,6 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         realTimeData[realTimeVitalRenderer.removePointer] = EMPTY_DATA
         
         setNeedsDisplay()
-        
-//        print("value: \(value)")
-//        print("realTimeVitalRenderer.drawPointer: \(realTimeVitalRenderer.drawPointer)")
-//        print("realTimeVitalRenderer.removePointer: \(realTimeVitalRenderer.removePointer)")
     }
     
     private func settingTransformer() {
