@@ -90,8 +90,8 @@ open class RealTimeVitalRenderer {
             if (firstY == -9999 || secondY == -9999){ continue }
 
             let startPoint =
-                CGPoint(x: CGFloat(x == 0 ? 0 : x - 1) * 0.2,
-                        y: CGFloat(firstY) * -100 + 300)
+                CGPoint(x: CGFloat(x == 0 ? 0 : x - 1),
+                        y: CGFloat(firstY))
                 .applying(valueToPixelMatrix)
             
             if firstPoint {
@@ -103,8 +103,8 @@ open class RealTimeVitalRenderer {
             
             let endPoint =
                 CGPoint(
-                    x: CGFloat(x) * 0.2,
-                    y: CGFloat(secondY) * -100 + 300)
+                    x: CGFloat(x),
+                    y: CGFloat(secondY))
                 .applying(valueToPixelMatrix)
             path.addLine(to: endPoint)
         }

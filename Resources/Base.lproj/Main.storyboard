@@ -18,12 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSC-md-BeN" customClass="RealTimeVitalChartView" customModule="iOSInfoChart" customModuleProvider="target">
-                                <rect key="frame" x="20" y="64" width="335" height="583"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-Sj-JIX">
-                                <rect key="frame" x="155.5" y="622" width="64" height="30"/>
-                                <state key="normal" title="Add Data"/>
+                                <rect key="frame" x="16" y="608" width="343" height="44"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="C82-pz-csJ"/>
+                                </constraints>
+                                <state key="normal" title="Add Data">
+                                    <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
+                                </state>
                                 <connections>
                                     <action selector="addDataButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnV-NH-7cR"/>
                                 </connections>
@@ -34,10 +40,12 @@
                         <constraints>
                             <constraint firstItem="OSC-md-BeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7Ej-XR-6PT"/>
                             <constraint firstItem="BtP-Sj-JIX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9YV-u0-hxC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OSC-md-BeN" secondAttribute="trailing" constant="20" id="CYh-zN-OOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OSC-md-BeN" secondAttribute="trailing" id="CYh-zN-OOW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BtP-Sj-JIX" secondAttribute="bottom" constant="15" id="KxG-Mm-UGZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSC-md-BeN" secondAttribute="bottom" constant="20" id="Lr8-4U-GAf"/>
-                            <constraint firstItem="OSC-md-BeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OoD-Z9-ACq"/>
+                            <constraint firstItem="BtP-Sj-JIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MH7-7S-rnT"/>
+                            <constraint firstItem="OSC-md-BeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OoD-Z9-ACq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BtP-Sj-JIX" secondAttribute="trailing" constant="16" id="VBR-It-z1C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="iOS InfoChart" id="HZF-FT-0hg"/>
@@ -69,8 +77,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

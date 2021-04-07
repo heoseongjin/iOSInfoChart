@@ -69,20 +69,18 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         valueCircleIndicatorColor = UIColor.red
         valueCircleIndicatorRadius = 10
         
-        //
-        setNeedsDisplay()
-        
+        viewPortHandler.setChartDimens(width: bounds.size.width, height: bounds.size.height)
         transformer = Transformer(viewPortHandler: viewPortHandler)
         realTimeVitalRenderer = RealTimeVitalRenderer(dataProvider: self)
         //datahandler
         
         setRealTimeSpec(spec: spec)
+        
+        settingTransformer()
     }
     
     open override func draw(_ rect: CGRect)
     {
-        settingTransformer()
-        
         guard let renderer = realTimeVitalRenderer else { return }
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
@@ -119,11 +117,12 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     
     private func settingTransformer() {
         guard let transformer = transformer else { return }
-        transformer.initOffsetMatrix()
+        
         transformer.initValueMatrix(chartXMin: 0,
                                     deltaX: CGFloat(spec.oneSecondDataCount * spec.visibleSecondRange),
                                     deltaY: CGFloat(spec.vitalMaxValue - spec.vitalMinValue),
                                     chartYMin: spec.vitalMinValue)
+        transformer.initOffsetMatrix()
     }
     
     private func resetRealTimeData() {

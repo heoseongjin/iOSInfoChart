@@ -10,22 +10,21 @@ import Foundation
 public class Spec {
     
     /// 1초 동안 들어오는 데이터 개수
-    private var _oneSecondDataCount = 500
+    private var _oneSecondDataCount: Int = 100
     
     /// 보여질 X축 범위 (초 단위)
-    private var _visibleSecondRange = 5
+    private var _visibleSecondRange: Int = 5
     
     /// 새로고침 되는 그래프와 이전 그래프와의 간격
-    private var _refreshGraphInterval = Double(0.2)
+    private var _refreshGraphInterval: Double = Double(0.2)
     
     /// 바이탈 최대 값
-    private var _vitalMaxValue = Double(1.0)
+    private var _vitalMaxValue: Double = Double(1.0)
     
     /// 바이탈 최소 값
-    private var _vitalMinValue = Double(-0.2)
+    private var _vitalMinValue: Double = Double(-0.2)
     
     public init() {
-        
     }
     
     public init(oneSecondDataCount: Int, visibleSecondRange: Int, refreshGraphInterval: Double, vitalMaxValue: Double, vitalMinValue: Double) {
