@@ -47,7 +47,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     public var valueCircleIndicatorColor: UIColor = UIColor()
     
     /// 실시간 데이터 핸들러
-//
+    public var dataHandler: RealTimeDataHandler!
     
     // 스토리보드에서 호출할 초기화 메소드
     public override init(frame: CGRect) {
@@ -73,6 +73,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         transformer = Transformer(viewPortHandler: viewPortHandler)
         realTimeVitalRenderer = RealTimeVitalRenderer(dataProvider: self)
         //datahandler
+        dataHandler = RealTimeDataHandler(dataProvider: self)
         
         setRealTimeSpec(spec: spec)
         
@@ -94,7 +95,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         
         self.spec = spec
         realTimeVitalRenderer.updateSetting()
-        //datahandler.updateSettings()
+        dataHandler.updateSetting()
         let dataCount = spec.oneSecondDataCount * spec.visibleSecondRange
         realTimeData = [Double](repeating: EMPTY_DATA, count: dataCount)
         resetRealTimeData()
@@ -130,16 +131,16 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     
     public func reset() {
         resetRealTimeData()
-//        datahandler.stop()
-//        datahandler.reset()
-//        datahandler.updateSetting()
+//        dataHandler.stop()
+//        dataHandler.reset()
+        dataHandler.updateSetting()
         realTimeVitalRenderer?.updateSetting()
 //        postInvalidate???????
     }
     
     // MARK: - Spec
     public func dequeueRealTimeData(value: Double) {
-        
+        addRealTimeData(value: value)
     }
     
     public lazy var oneSecondDataCount = spec.oneSecondDataCount

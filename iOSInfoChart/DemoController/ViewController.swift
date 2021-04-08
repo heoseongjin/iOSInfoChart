@@ -12,27 +12,30 @@ class ViewController: UIViewController {
     let ecgDummy1 = DummyData.ecgDummy1
 //    let ecgDummy1 = [10, 20, 0.5, 100]
     
-    var i = 1
-    
     @IBOutlet var chartView: RealTimeVitalChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initChart()
-        chartRun()
     }
     
-    func chartRun() {
-        for i in 0..<ecgDummy1.count {
-            self.chartView.addRealTimeData(value: self.ecgDummy1[i])
+    @IBAction func pressStartButton(_ sender: Any) {
+        chartView.dataHandler.run()
+    }
+    
+    @IBAction func pressStopButton(_ sender: Any) {
+        chartView.dataHandler.stop()
+    }
+    
+    @IBAction func pressAddButton(_ sender: Any) {
+        for i in ecgDummy1 {
+            chartView.dataHandler.enqueue(value: i)
         }
     }
     
-    @IBAction func addDataButton(_ sender: Any) {
-        i += 1
-        self.chartView.addRealTimeData(value: self.ecgDummy1[self.i])
+    @IBAction func pressResetButton(_ sender: Any) {
+        chartView.reset()
     }
-    
     
     func initChart() {
         let spec = Spec()
