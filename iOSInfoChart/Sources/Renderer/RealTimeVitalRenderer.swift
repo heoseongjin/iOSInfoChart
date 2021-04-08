@@ -80,6 +80,7 @@ open class RealTimeVitalRenderer {
         var firstPoint = true
         
         let path = CGMutablePath()
+        var rect = CGRect()
         
         for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
             firstY = dataProvider.realTimeData[x == 0 ? 0 : x - 1]
@@ -120,6 +121,21 @@ open class RealTimeVitalRenderer {
         
         if dataProvider.isEnabledValueCircleIndicator {
             
+            let circlePoint =
+                CGPoint(x: CGFloat(drawPointer),
+                        y: CGFloat(dataProvider.realTimeData[drawPointer]))
+                .applying(valueToPixelMatrix)
+            
+            let circleRadius = dataProvider.valueCircleIndicatorRadius
+            let circleDiameter = circleRadius * 2.0
+            
+            rect.origin.x = circlePoint.x - CGFloat(circleRadius)
+            rect.origin.y = circlePoint.y - CGFloat(circleRadius)
+            rect.size.width = CGFloat(circleDiameter)
+            rect.size.height = CGFloat(circleDiameter)
+            
+            context.setFillColor(dataProvider.valueCircleIndicatorColor.cgColor)
+            context.fillEllipse(in: rect)
         }
     }
 }
