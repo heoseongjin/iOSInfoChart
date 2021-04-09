@@ -49,7 +49,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="f7C-oo-jZj"/>
                                 </constraints>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Data">
                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                 </state>
                                 <connections>

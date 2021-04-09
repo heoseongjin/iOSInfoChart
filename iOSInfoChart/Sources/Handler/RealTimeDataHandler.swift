@@ -25,6 +25,9 @@ open class RealTimeDataHandler {
 
     /// 스케쥴러(타이머)
     var timer: Timer?
+    // 로그용
+    var prevTime = Date()
+    var nowTime = Date()
     
     /// Task Flag
     var isRunning: Bool = false
@@ -38,7 +41,7 @@ open class RealTimeDataHandler {
     /// 차트의 스펙이 변경될 경우 호출됨
     public func updateSetting() {
         guard let dataProvider = dataProvider else { return }
-        self.defaultValue = ((dataProvider.vitalMaxValue - dataProvider.vitalMinValue / 2) + dataProvider.vitalMinValue)
+        self.defaultValue = ((dataProvider.vitalMaxValue - dataProvider.vitalMinValue) / 2 + dataProvider.vitalMinValue)
     }
 
     /// Queue Enqueue
@@ -58,25 +61,34 @@ open class RealTimeDataHandler {
     }
     
     /// 스케쥴러 실행
-    /// ex)  1초에 500개의 데이터를 그리는 경우, 0.02초 간격으로 데이터를 내보내는 스케쥴러가 생성됨.
+    /// ex)  1초에 500개의 데이터를 그리는 경우, 0.002초 간격으로 데이터를 내보내는 스케쥴러가 생성됨.
     public func run() {
+        let dataInterval = 1.0 / Double(dataProvider!.oneSecondDataCount)
+        //delay 오차 대응
+        let dataInterval2 = dataInterval / 2.0
         
-        let time = max(1/dataProvider!.oneSecondDataCount, 1) / 2
-        timer = Timer(timeInterval: TimeInterval(time), target: self, selector: #selector(fetch(_:)), userInfo: nil, repeats: true)
+        print(TimeInterval(dataInterval2))
         
         if(!isRunning) {
-            RunLoop.main.add(timer!, forMode: .common) // don't forget to add `timer` to `RunLoop`
+            timer = Timer.scheduledTimer(timeInterval: TimeInterval(dataInterval2), target: self, selector: #selector(scheduledTask(_:)), userInfo: nil, repeats: true)
         }
         isRunning = true
+    }
+    
+    @objc fileprivate func scheduledTask(_ timer: Timer!) {
+        
+        dequeue()
+        
+        nowTime = Date()
+        print("delay = +\(nowTime.timeIntervalSince(prevTime))")
+        prevTime = nowTime
+        
     }
     
     /// 스케쥴러 정지
     public func stop() {
         if(isRunning) {
             timer?.invalidate()
-            if timer! != nil {
-                RunLoop.main.add(timer!, forMode: .common)
-            }
             isRunning = false
         }
     }
@@ -84,20 +96,6 @@ open class RealTimeDataHandler {
     /// Queue Reset
     public func reset() {
         mainQueue.clear()
-    }
-    
-    
-    /// 핸들러 자원 해제.
-    /// ( * 핸들러가 포함된 차트의 자원이 해제되거나 더 이상 핸들러를 사용하지 않을 경우 필히 이 메소드를 호출하여야 함. 앱 성능 저하의 원인이 될 수 있음.)
-    public func destroy() {
-        stop()
-        //shutdown??
-    }
-    
-    
-    @objc fileprivate func fetch(_ timer: Timer!) {
-        dequeue()
-        print(isRunning)
     }
 }
 

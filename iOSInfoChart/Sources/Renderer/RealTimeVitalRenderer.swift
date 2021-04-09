@@ -119,6 +119,7 @@ open class RealTimeVitalRenderer {
         context.setStrokeColor(dataProvider.lineColor.cgColor)
         context.strokePath()
         
+        // draw Circle Indicator
         if dataProvider.isEnabledValueCircleIndicator {
             
             let circlePoint =
