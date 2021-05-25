@@ -20,7 +20,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     public var realTimeData: [Double] = [Double]()
     
     /// 렌더링 스레드
-//    public var realTimeData: [Double]
+    //
     
     /// 실시간 데이터 렌더링 객체
     public var realTimeVitalRenderer: RealTimeVitalRenderer?
@@ -35,7 +35,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     public var lineColor: UIColor = UIColor()
     
     /// 차트 선 두께
-    public var lineWidth: CGFloat = CGFloat(1.0)
+    public var lineWidth: CGFloat = CGFloat()
     
     /// 현재 값 인디케이터 활성 여부
     public var isEnabledValueCircleIndicator: Bool = true
@@ -63,16 +63,15 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
 
     private func initialize() {
         lineColor = UIColor.red
-        lineWidth = CGFloat(1.0)
+        lineWidth = CGFloat(1.5)
         
         isEnabledValueCircleIndicator = true
         valueCircleIndicatorColor = UIColor.red
-        valueCircleIndicatorRadius = 2.0
+        valueCircleIndicatorRadius = 2
         
         viewPortHandler.setChartDimens(width: bounds.size.width, height: bounds.size.height)
         transformer = Transformer(viewPortHandler: viewPortHandler)
         realTimeVitalRenderer = RealTimeVitalRenderer(dataProvider: self)
-        //datahandler
         dataHandler = RealTimeDataHandler(dataProvider: self)
         
         setRealTimeSpec(spec: spec)
@@ -80,8 +79,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         settingTransformer()
     }
     
-    open override func draw(_ rect: CGRect)
-    {
+    open override func draw(_ rect: CGRect) {
         
         guard let renderer = realTimeVitalRenderer else { return }
         guard let context = UIGraphicsGetCurrentContext() else { return }

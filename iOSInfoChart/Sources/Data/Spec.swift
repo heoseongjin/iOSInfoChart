@@ -13,7 +13,7 @@ public class Spec {
     private var _oneSecondDataCount: Int = 500
     
     /// 보여질 X축 범위 (초 단위)
-    private var _visibleSecondRange: Int = 5
+    private var _visibleSecondRange: Int = 3
     
     /// 새로고침 되는 그래프와 이전 그래프와의 간격
     private var _refreshGraphInterval: Double = Double(0.15)

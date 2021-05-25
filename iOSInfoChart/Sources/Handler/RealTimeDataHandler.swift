@@ -63,24 +63,25 @@ open class RealTimeDataHandler {
     /// 스케쥴러 실행
     /// ex)  1초에 500개의 데이터를 그리는 경우, 0.002초 간격으로 데이터를 내보내는 스케쥴러가 생성됨.
     public func run() {
-        let dataInterval = 1.0 / Double(dataProvider!.oneSecondDataCount)
-        //delay 오차 대응
-        let dataInterval2 = dataInterval / 2.0
+        let dataInterval = 1 / Double(dataProvider!.oneSecondDataCount)
         
-        print(TimeInterval(dataInterval2))
+        //delay 오차 대응
+        let dataInterval2 = dataInterval / 2
+        
         
         if(!isRunning) {
             timer = Timer.scheduledTimer(timeInterval: TimeInterval(dataInterval2), target: self, selector: #selector(scheduledTask(_:)), userInfo: nil, repeats: true)
         }
         isRunning = true
     }
+
     
     @objc fileprivate func scheduledTask(_ timer: Timer!) {
         
         dequeue()
         
         nowTime = Date()
-        print("delay = +\(nowTime.timeIntervalSince(prevTime))")
+        print("Data delay = +\(nowTime.timeIntervalSince(prevTime))")
         prevTime = nowTime
         
     }
@@ -98,5 +99,3 @@ open class RealTimeDataHandler {
         mainQueue.clear()
     }
 }
-
-
