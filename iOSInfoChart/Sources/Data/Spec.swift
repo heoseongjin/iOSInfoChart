@@ -13,10 +13,10 @@ public class Spec {
     private var _oneSecondDataCount: Int = 500
     
     /// 보여질 X축 범위 (초 단위)
-    private var _visibleSecondRange: Int = 3
+    private var _visibleSecondRange: Int = 5
     
     /// 새로고침 되는 그래프와 이전 그래프와의 간격
-    private var _refreshGraphInterval: Double = Double(0.15)
+    private var _refreshGraphInterval: Double = Double(0.1)
     
     /// 바이탈 최대 값
     private var _vitalMaxValue: Double = Double(2.0)

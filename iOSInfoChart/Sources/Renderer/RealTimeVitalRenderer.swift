@@ -83,16 +83,22 @@ open class RealTimeVitalRenderer {
         
         var rect = CGRect()
         
+        removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
+        
         for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
             firstY = dataProvider.realTimeData[x == 0 ? 0 : x - 1]
             secondY = dataProvider.realTimeData[x]
-            removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
+//            removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
             
             // change to empty data
             if (firstY == -9999 || secondY == -9999){
                 continue
             }
             
+            DispatchQueue.global(qos: .userInteractive).sync{
+                
+            }
+
             let path = CGMutablePath()
             
             // 선의 시작점

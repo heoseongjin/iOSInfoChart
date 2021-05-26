@@ -24,13 +24,8 @@ open class RealTimeDataHandler {
     var dequeueValue: Double = 0
 
     /// 스케쥴러(타이머)
-    var timer: Timer?
-    // 로그용
-    var prevTime = Date()
-    var nowTime = Date()
+    var timer: DispatchSourceTimer?
     
-    /// Task Flag
-    var isRunning: Bool = false
 
     public init(dataProvider: VitalChartDataProvider) {
         self.dataProvider = dataProvider
@@ -65,37 +60,46 @@ open class RealTimeDataHandler {
     public func run() {
         let dataInterval = 1 / Double(dataProvider!.oneSecondDataCount)
         
-        //delay 오차 대응
-        let dataInterval2 = dataInterval / 2
-        
-        
-        if(!isRunning) {
-            timer = Timer.scheduledTimer(timeInterval: TimeInterval(dataInterval2), target: self, selector: #selector(scheduledTask(_:)), userInfo: nil, repeats: true)
+        if timer == nil {
+            timer = DispatchSource.makeTimerSource(flags: [],
+                                                   queue: DispatchQueue.global(qos: .userInteractive))
+            timer?.schedule(deadline: .now(),
+                            repeating: dataInterval)
+            timer?.setEventHandler {
+                self.scheduledTask()
+            }
+            timer?.activate()
         }
-        isRunning = true
     }
-
     
-    @objc fileprivate func scheduledTask(_ timer: Timer!) {
+    // 로그용
+    var prevTime: Date?
+    var totalOverDelayTime = TimeInterval(0)
+    
+    fileprivate func scheduledTask() {
         
-        dequeue()
+        let dataInterval = 1 / Double(dataProvider!.oneSecondDataCount)
         
-        nowTime = Date()
-        print("Data delay = +\(nowTime.timeIntervalSince(prevTime))")
-        prevTime = nowTime
+        DispatchQueue.main.async {
+            self.dequeue()
+        }
         
+        let delayTime = Date().timeIntervalSince(prevTime ?? Date())
+        totalOverDelayTime += delayTime - dataInterval
+        print("delayTime = \(delayTime) //  totalOverDelayTime = \(totalOverDelayTime)")
+        prevTime = Date()
     }
     
     /// 스케쥴러 정지
     public func stop() {
-        if(isRunning) {
-            timer?.invalidate()
-            isRunning = false
-        }
+        timer?.cancel()
+        timer = nil
     }
     
     /// Queue Reset
     public func reset() {
         mainQueue.clear()
+
+        totalOverDelayTime = TimeInterval(0)
     }
 }

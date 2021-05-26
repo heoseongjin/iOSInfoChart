@@ -67,7 +67,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         
         isEnabledValueCircleIndicator = true
         valueCircleIndicatorColor = UIColor.red
-        valueCircleIndicatorRadius = 2
+        valueCircleIndicatorRadius = 3
         
         viewPortHandler.setChartDimens(width: bounds.size.width, height: bounds.size.height)
         transformer = Transformer(viewPortHandler: viewPortHandler)
