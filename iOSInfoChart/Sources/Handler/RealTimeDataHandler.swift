@@ -20,6 +20,9 @@ open class RealTimeDataHandler {
     /// 기본 값. 스펙에서 Max와 Min의 중간 값, Queue에 데이터가 없을 경우 출력되는 값
     var defaultValue: Double = 0
     
+    /// 마지막으로 dequeue된 값
+    var lastValue: Double = 0
+    
     /// 출력될 값을 담는 임시 변수
     var dequeueValue: Double = 0
 
@@ -50,7 +53,9 @@ open class RealTimeDataHandler {
     /// Queue Dequeue
     public func dequeue() {
         DispatchQueue(label: "iOSInfoChart.app.dequeue").sync {
-            self.dequeueValue = self.mainQueue.dequeue() ?? self.defaultValue
+            self.lastValue = dequeueValue
+            //self.dequeueValue = self.mainQueue.dequeue() ?? self.defaultValue
+            self.dequeueValue = self.mainQueue.dequeue() ?? self.lastValue
             self.dataProvider!.dequeueRealTimeData(value: self.dequeueValue)
         }
     }
@@ -84,17 +89,18 @@ open class RealTimeDataHandler {
         DispatchQueue.main.async {
             self.dequeue()
         }
-        
-        
+
         // 로그
-        if let prevTime = prevTime {
+        if prevTime != nil {
             nowTime = Date()
-            let delayTime = nowTime!.timeIntervalSince(prevTime)
+            let delayTime = nowTime!.timeIntervalSince(prevTime!)
             totalOverDelayTime += delayTime - dataInterval
+            prevTime = nowTime
             
             print("delayTime = \(delayTime) //  totalOverDelayTime = \(totalOverDelayTime)")
+        } else {
+            prevTime = Date()
         }
-        prevTime = nowTime
     }
     
     /// 스케쥴러 정지
