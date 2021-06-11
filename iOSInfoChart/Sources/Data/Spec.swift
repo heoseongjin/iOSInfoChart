@@ -19,10 +19,10 @@ public class Spec {
     private var _refreshGraphInterval: Double = Double(0.1)
     
     /// 바이탈 최대 값
-    private var _vitalMaxValue: Double = Double(2.0)
+    private var _vitalMaxValue: Double = Double(1.5)
     
     /// 바이탈 최소 값
-    private var _vitalMinValue: Double = Double(-1.0)
+    private var _vitalMinValue: Double = Double(-0.5)
     
     public init() {
     }

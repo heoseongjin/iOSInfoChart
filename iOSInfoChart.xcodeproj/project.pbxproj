@@ -195,7 +195,6 @@
 				BFCAB1CF26117FCA00FB8CAA /* DataProviders */,
 				BF4D59A5261B32F800EBFA53 /* Handler */,
 				BFCAB1D126117FED00FB8CAA /* Renderer */,
-				BFCAB1D22611800500FB8CAA /* Thread */,
 				BFCAB1D32611800E00FB8CAA /* Utils */,
 				BF605B8F2616BE2E00AF818C /* DummyData */,
 			);
@@ -232,13 +231,6 @@
 				BFCAB1FC2612CC7800FB8CAA /* RealTimeVitalRenderer.swift */,
 			);
 			path = Renderer;
-			sourceTree = "<group>";
-		};
-		BFCAB1D22611800500FB8CAA /* Thread */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Thread;
 			sourceTree = "<group>";
 		};
 		BFCAB1D32611800E00FB8CAA /* Utils */ = {

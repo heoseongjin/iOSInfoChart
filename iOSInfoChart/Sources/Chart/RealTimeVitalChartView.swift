@@ -79,6 +79,14 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         settingTransformer()
     }
     
+    // 차트 사이즈 변경
+    public func updateChartSize() {
+        print("update")
+        
+        viewPortHandler.setChartDimens(width: bounds.size.width, height: bounds.size.height)
+        settingTransformer()
+    }
+    
     open override func draw(_ rect: CGRect) {
         
         guard let renderer = realTimeVitalRenderer else { return }

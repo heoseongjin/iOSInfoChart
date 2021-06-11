@@ -73,6 +73,7 @@ open class RealTimeDataHandler {
     }
     
     // 로그용
+    var nowTime: Date?
     var prevTime: Date?
     var totalOverDelayTime = TimeInterval(0)
     
@@ -84,10 +85,16 @@ open class RealTimeDataHandler {
             self.dequeue()
         }
         
-        let delayTime = Date().timeIntervalSince(prevTime ?? Date())
-        totalOverDelayTime += delayTime - dataInterval
-        print("delayTime = \(delayTime) //  totalOverDelayTime = \(totalOverDelayTime)")
-        prevTime = Date()
+        
+        // 로그
+        if let prevTime = prevTime {
+            nowTime = Date()
+            let delayTime = nowTime!.timeIntervalSince(prevTime)
+            totalOverDelayTime += delayTime - dataInterval
+            
+            print("delayTime = \(delayTime) //  totalOverDelayTime = \(totalOverDelayTime)")
+        }
+        prevTime = nowTime
     }
     
     /// 스케쥴러 정지
@@ -100,6 +107,8 @@ open class RealTimeDataHandler {
     public func reset() {
         mainQueue.clear()
 
+        // 로그
         totalOverDelayTime = TimeInterval(0)
+        prevTime = nil
     }
 }

@@ -41,5 +41,11 @@ class ViewController: UIViewController {
         let spec = Spec()
         chartView.setRealTimeSpec(spec: spec)
     }
+    
+    // 화면 변화 대응
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        chartView.updateChartSize()
+    }
 }
 
