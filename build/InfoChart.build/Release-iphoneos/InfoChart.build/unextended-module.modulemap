@@ -1,0 +1,10 @@
+framework module InfoChart {
+  umbrella header "InfoChart.h"
+
+  export *
+  module * { export * }
+}
+
+module InfoChart.__Swift {
+    exclude header "InfoChart-Swift.h"
+}

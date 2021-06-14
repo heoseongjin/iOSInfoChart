@@ -1,0 +1,12 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+options: "d1c43782de4e4a3144f213191efb4bcb"
+build_time: [1623670144, 558770000]
+inputs:
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Renderer/RealTimeVitalRenderer.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Utils/Queue.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Data/Spec.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Handler/RealTimeDataHandler.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Utils/Transformer.swift": [9223372036, 854775807]
+  "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/InfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift": [9223372036, 854775807]
