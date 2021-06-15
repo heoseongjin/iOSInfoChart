@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  RealTimeVitalChartViewController.swift
 //  InfoChartDemo-iOS
 //
-//  Created by Heo on 2021/06/14.
+//  Created by Heo on 2021/06/15.
 //
 
 import UIKit
 import InfoChart
 
-class DemoViewController: UIViewController {
+class RealTimeVitalChartViewController: UIViewController {
 
     let ecgDemoData = DemoData.ecgDemo1
     
@@ -16,6 +16,8 @@ class DemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "RealTime Vital Chart"
+        
         initChart()
     }
     
@@ -27,7 +29,7 @@ class DemoViewController: UIViewController {
         chartView.dataHandler.stop()
     }
     
-    @IBAction func pressAddButton(_ sender: Any) {
+    @IBAction func pressInsertButton(_ sender: Any) {
         for i in ecgDemoData {
             chartView.dataHandler.enqueue(value: i)
         }
@@ -38,7 +40,11 @@ class DemoViewController: UIViewController {
     }
     
     func initChart() {
-        let spec = Spec()
+        let spec = Spec(oneSecondDataCount: 500,
+                        visibleSecondRange: 5,
+                        refreshGraphInterval: 0.1,
+                        vitalMaxValue: 1.5,
+                        vitalMinValue: -0.5)
         chartView.setRealTimeSpec(spec: spec)
     }
     
@@ -48,5 +54,10 @@ class DemoViewController: UIViewController {
         super.viewDidLayoutSubviews()
         chartView.updateChartSize()
     }
+    
+    // 화면 이동 시 타이머 해제
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        chartView.dataHandler.stop()
+    }
 }
-

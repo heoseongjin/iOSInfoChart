@@ -43,7 +43,7 @@ public class Spec {
             return _oneSecondDataCount
         }
         set {
-            let condition = newValue < 1
+            let condition = newValue >= 1
             let message = "oneSecondDataCount: 1초 동안 들어올 데이터의 갯수는 최소 1개 이상이어야 합니다."
             assert(condition, message)
             _oneSecondDataCount = newValue
@@ -56,7 +56,7 @@ public class Spec {
             return _visibleSecondRange
         }
         set {
-            let condition = newValue < 2
+            let condition = newValue >= 2
             let message = "visibleSecondRange: 보여질 범위는 최소 2초 이상이어야 합니다."
             assert(condition , message)
             _visibleSecondRange = newValue
@@ -69,7 +69,7 @@ public class Spec {
             return _refreshGraphInterval
         }
         set {
-            let condition = newValue <= 0.0 || newValue >= 1.0
+            let condition = 0.0 < newValue && newValue < 1.0
             let message = "refreshGraphInterval: 이전 그래프와의 간격은 퍼센트로 나타내어야 하며, 0.0 초과, 1.0 미만이어야 합니다."
             assert(condition , message)
             _refreshGraphInterval = newValue
@@ -82,8 +82,8 @@ public class Spec {
             return _vitalMaxValue
         }
         set {
-            let condition = newValue <= vitalMinValue
-            let message = "vitalMaxValue: 최대값은 최소값보다 작거나 같을 수 없습니다."
+            let condition = newValue > vitalMinValue
+            let message = "vitalMaxValue: 최대값은 최소값보다 커야합니다."
             assert(condition , message)
             _vitalMaxValue = newValue
         }
@@ -95,8 +95,8 @@ public class Spec {
             return _vitalMinValue
         }
         set {
-            let condition = vitalMaxValue <= newValue
-            let message = "vitalMaxValue: 최대값은 최소값보다 작거나 같을 수 없습니다."
+            let condition = vitalMaxValue > newValue
+            let message = "vitalMaxValue: 최대값은 최소값보다 커야합니다."
             assert(condition , message)
             _vitalMinValue = newValue
         }

@@ -8,24 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		BFD068812677790600D18ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD068802677790600D18ACD /* AppDelegate.swift */; };
-		BFD068832677790600D18ACD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD068822677790600D18ACD /* SceneDelegate.swift */; };
-		BFD068852677790600D18ACD /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD068842677790600D18ACD /* DemoViewController.swift */; };
-		BFD068882677790600D18ACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD068862677790600D18ACD /* Main.storyboard */; };
 		BFD0688A2677790700D18ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD068892677790700D18ACD /* Assets.xcassets */; };
 		BFD0688D2677790700D18ACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0688B2677790700D18ACD /* LaunchScreen.storyboard */; };
 		BFD0689B26777B7300D18ACD /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0689A26777B7300D18ACD /* DemoData.swift */; };
+		BFD068A12678462200D18ACD /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0689F2678462200D18ACD /* DemoListViewController.swift */; };
+		BFD068A22678462200D18ACD /* DemoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD068A02678462200D18ACD /* DemoListViewController.xib */; };
+		BFD068A426784F2C00D18ACD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD068A326784F2C00D18ACD /* SceneDelegate.swift */; };
+		BFD068A72678516C00D18ACD /* RealTimeVitalChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD068A52678516C00D18ACD /* RealTimeVitalChartViewController.swift */; };
+		BFD068A82678516C00D18ACD /* RealTimeVitalChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD068A62678516C00D18ACD /* RealTimeVitalChartViewController.xib */; };
+		BFD068B12678743400D18ACD /* InfoChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD068B02678743400D18ACD /* InfoChart.framework */; };
+		BFD068B22678743400D18ACD /* InfoChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFD068B02678743400D18ACD /* InfoChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFD068B32678743400D18ACD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFD068B22678743400D18ACD /* InfoChart.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BFD0687D2677790600D18ACD /* InfoChartDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InfoChartDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD068802677790600D18ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD068822677790600D18ACD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BFD068842677790600D18ACD /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
-		BFD068872677790600D18ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD068892677790700D18ACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD0688C2677790700D18ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD0688E2677790700D18ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD0689A26777B7300D18ACD /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		BFD0689F2678462200D18ACD /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
+		BFD068A02678462200D18ACD /* DemoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoListViewController.xib; sourceTree = "<group>"; };
+		BFD068A326784F2C00D18ACD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BFD068A52678516C00D18ACD /* RealTimeVitalChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeVitalChartViewController.swift; sourceTree = "<group>"; };
+		BFD068A62678516C00D18ACD /* RealTimeVitalChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealTimeVitalChartViewController.xib; sourceTree = "<group>"; };
+		BFD068B02678743400D18ACD /* InfoChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InfoChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD068B12678743400D18ACD /* InfoChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,9 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				BFD0687F2677790600D18ACD /* InfoChartDemo-iOS */,
+				BFD068B42678A5C100D18ACD /* XIBs */,
 				BFD068942677798E00D18ACD /* Resources */,
 				BFD06895267779A600D18ACD /* Supporting Files */,
 				BFD0687E2677790600D18ACD /* Products */,
+				BFD068A92678742200D18ACD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,8 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				BFD068802677790600D18ACD /* AppDelegate.swift */,
-				BFD068822677790600D18ACD /* SceneDelegate.swift */,
-				BFD0689826777A0600D18ACD /* DemoController */,
+				BFD068A326784F2C00D18ACD /* SceneDelegate.swift */,
+				BFD0689F2678462200D18ACD /* DemoListViewController.swift */,
+				BFD0689826777A0600D18ACD /* DemoChart */,
 				BFD06896267779E300D18ACD /* DemoData */,
 			);
 			path = "InfoChartDemo-iOS";
@@ -71,7 +96,6 @@
 		BFD068942677798E00D18ACD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BFD068862677790600D18ACD /* Main.storyboard */,
 				BFD068892677790700D18ACD /* Assets.xcassets */,
 				BFD0688B2677790700D18ACD /* LaunchScreen.storyboard */,
 			);
@@ -94,12 +118,37 @@
 			path = DemoData;
 			sourceTree = "<group>";
 		};
-		BFD0689826777A0600D18ACD /* DemoController */ = {
+		BFD0689826777A0600D18ACD /* DemoChart */ = {
 			isa = PBXGroup;
 			children = (
-				BFD068842677790600D18ACD /* DemoViewController.swift */,
+				BFD068A52678516C00D18ACD /* RealTimeVitalChartViewController.swift */,
 			);
-			path = DemoController;
+			path = DemoChart;
+			sourceTree = "<group>";
+		};
+		BFD068A92678742200D18ACD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFD068B02678743400D18ACD /* InfoChart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFD068B42678A5C100D18ACD /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				BFD068A02678462200D18ACD /* DemoListViewController.xib */,
+				BFD068B52678A5D600D18ACD /* DemoChart */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		BFD068B52678A5D600D18ACD /* DemoChart */ = {
+			isa = PBXGroup;
+			children = (
+				BFD068A62678516C00D18ACD /* RealTimeVitalChartViewController.xib */,
+			);
+			path = DemoChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +161,7 @@
 				BFD068792677790600D18ACD /* Sources */,
 				BFD0687A2677790600D18ACD /* Frameworks */,
 				BFD0687B2677790600D18ACD /* Resources */,
+				BFD068B32678743400D18ACD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,8 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD0688D2677790700D18ACD /* LaunchScreen.storyboard in Resources */,
+				BFD068A82678516C00D18ACD /* RealTimeVitalChartViewController.xib in Resources */,
 				BFD0688A2677790700D18ACD /* Assets.xcassets in Resources */,
-				BFD068882677790600D18ACD /* Main.storyboard in Resources */,
+				BFD068A22678462200D18ACD /* DemoListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,24 +223,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD068A426784F2C00D18ACD /* SceneDelegate.swift in Sources */,
 				BFD0689B26777B7300D18ACD /* DemoData.swift in Sources */,
-				BFD068852677790600D18ACD /* DemoViewController.swift in Sources */,
+				BFD068A12678462200D18ACD /* DemoListViewController.swift in Sources */,
 				BFD068812677790600D18ACD /* AppDelegate.swift in Sources */,
-				BFD068832677790600D18ACD /* SceneDelegate.swift in Sources */,
+				BFD068A72678516C00D18ACD /* RealTimeVitalChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BFD068862677790600D18ACD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFD068872677790600D18ACD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BFD0688B2677790700D18ACD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -325,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PG84C29Y3P;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PG84C29Y3P;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

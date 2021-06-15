@@ -62,12 +62,12 @@
 		BFD067ED2677451800D18ACD /* InfoChart */ = {
 			isa = PBXGroup;
 			children = (
+				BFD068192677465500D18ACD /* Chart */,
+				BFD068212677465500D18ACD /* Data */,
+				BFD068172677465500D18ACD /* DataProviders */,
 				BFD068132677465500D18ACD /* Handler */,
 				BFD068152677465500D18ACD /* Renderer */,
-				BFD068172677465500D18ACD /* DataProviders */,
-				BFD068192677465500D18ACD /* Chart */,
 				BFD0681B2677465500D18ACD /* Utils */,
-				BFD068212677465500D18ACD /* Data */,
 			);
 			path = InfoChart;
 			sourceTree = "<group>";

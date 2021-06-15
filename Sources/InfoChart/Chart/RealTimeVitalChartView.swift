@@ -19,9 +19,6 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     /// 실시간 데이터
     public var realTimeData: [Double] = [Double]()
     
-    /// 렌더링 스레드
-    //
-    
     /// 실시간 데이터 렌더링 객체
     public var realTimeVitalRenderer: RealTimeVitalRenderer?
     

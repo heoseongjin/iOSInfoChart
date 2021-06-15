@@ -96,6 +96,7 @@ open class RealTimeDataHandler {
 //            totalOverDelayTime += delayTime - dataInterval
 //            prevTime = nowTime
 //
+//            print("delayTime = \(delayTime)")
 //            print("delayTime = \(delayTime) //  totalOverDelayTime = \(totalOverDelayTime)")
 //        } else {
 //            prevTime = Date()

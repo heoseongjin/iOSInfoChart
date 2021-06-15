@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RealTimeVitalChartViewController" customModule="InfoChartDemo_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="chartView" destination="llK-8D-zvp" id="YoI-oG-Htb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llK-8D-zvp" customClass="RealTimeVitalChartView" customModule="InfoChart">
+                    <rect key="frame" x="0.0" y="44" width="375" height="539"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWn-UC-IGU">
+                    <rect key="frame" x="16" y="607" width="80" height="44"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="wGg-wJ-yGd"/>
+                    </constraints>
+                    <state key="normal" title="▶"/>
+                    <connections>
+                        <action selector="pressStartButton:" destination="-1" eventType="touchUpInside" id="Fcv-wG-Xww"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brc-tn-ccO">
+                    <rect key="frame" x="104" y="607" width="79.5" height="44"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vWZ-84-WId"/>
+                    </constraints>
+                    <state key="normal" title="❚❚"/>
+                    <connections>
+                        <action selector="pressStopButton:" destination="-1" eventType="touchUpInside" id="u7S-iC-UgB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-rC-Cin">
+                    <rect key="frame" x="279.5" y="607" width="79.5" height="44"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="PjU-eX-F5X"/>
+                    </constraints>
+                    <state key="normal" title="Reset"/>
+                    <connections>
+                        <action selector="pressResetButton:" destination="-1" eventType="touchUpInside" id="82Z-x1-Rme"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayW-4x-yA8">
+                    <rect key="frame" x="191.5" y="607" width="80" height="44"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="kuh-ov-GQX"/>
+                    </constraints>
+                    <state key="normal" title="Insert"/>
+                    <connections>
+                        <action selector="pressInsertButton:" destination="-1" eventType="touchUpInside" id="w5Q-of-L8I"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mWn-UC-IGU" firstAttribute="width" secondItem="Brc-tn-ccO" secondAttribute="width" id="0pi-Os-JbS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5DW-rC-Cin" secondAttribute="trailing" constant="16" id="0r4-v5-CXP"/>
+                <constraint firstItem="mWn-UC-IGU" firstAttribute="top" secondItem="llK-8D-zvp" secondAttribute="bottom" constant="24" id="4G6-dt-6Bx"/>
+                <constraint firstItem="5DW-rC-Cin" firstAttribute="top" secondItem="ayW-4x-yA8" secondAttribute="top" id="AHx-at-VDx"/>
+                <constraint firstItem="llK-8D-zvp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="Dtr-9l-jFI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mWn-UC-IGU" secondAttribute="bottom" constant="16" id="Ih0-Hy-OMU"/>
+                <constraint firstItem="Brc-tn-ccO" firstAttribute="width" secondItem="ayW-4x-yA8" secondAttribute="width" id="KQN-T9-0VM"/>
+                <constraint firstItem="Brc-tn-ccO" firstAttribute="top" secondItem="mWn-UC-IGU" secondAttribute="top" id="Mwr-E5-Djv"/>
+                <constraint firstItem="ayW-4x-yA8" firstAttribute="width" secondItem="5DW-rC-Cin" secondAttribute="width" id="QCj-NJ-PSn"/>
+                <constraint firstItem="llK-8D-zvp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U4A-HT-pAW"/>
+                <constraint firstItem="mWn-UC-IGU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="WOz-BI-Hei"/>
+                <constraint firstAttribute="trailing" secondItem="llK-8D-zvp" secondAttribute="trailing" id="bBJ-xD-uJy"/>
+                <constraint firstItem="Brc-tn-ccO" firstAttribute="leading" secondItem="mWn-UC-IGU" secondAttribute="trailing" constant="8" id="i0o-pJ-y97"/>
+                <constraint firstItem="5DW-rC-Cin" firstAttribute="leading" secondItem="ayW-4x-yA8" secondAttribute="trailing" constant="8" id="ncL-WR-uZp"/>
+                <constraint firstItem="ayW-4x-yA8" firstAttribute="leading" secondItem="Brc-tn-ccO" secondAttribute="trailing" constant="8" id="ran-za-rhw"/>
+                <constraint firstItem="ayW-4x-yA8" firstAttribute="top" secondItem="Brc-tn-ccO" secondAttribute="top" id="wjb-lc-Ntx"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="81.409295352323838"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
