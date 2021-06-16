@@ -1,0 +1,348 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 131,
+      "symbol": "RealTimeVitalChartView.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 216,
+      "symbol": "RealTimeVitalChartView.dequeueRealTimeData(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 220,
+      "symbol": "RealTimeVitalChartView.oneSecondDataCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 222,
+      "symbol": "RealTimeVitalChartView.visibleSecondRange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 229,
+      "symbol": "RealTimeVitalChartView.refreshGraphInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 231,
+      "symbol": "RealTimeVitalChartView.vitalMaxValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Chart/RealTimeVitalChartView.swift",
+      "line": 233,
+      "symbol": "RealTimeVitalChartView.vitalMinValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Data/Spec.swift",
+      "line": 27,
+      "symbol": "Spec.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Data/Spec.swift",
+      "line": 30,
+      "symbol": "Spec.init(oneSecondDataCount:visibleSecondRange:refreshGraphInterval:vitalMaxValue:vitalMinValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 19,
+      "symbol": "VitalChartDataProvider.oneSecondDataCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 21,
+      "symbol": "VitalChartDataProvider.visibleSecondRange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 23,
+      "symbol": "VitalChartDataProvider.totalRanageCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 25,
+      "symbol": "VitalChartDataProvider.refreshGraphInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 27,
+      "symbol": "VitalChartDataProvider.realTimeData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 29,
+      "symbol": "VitalChartDataProvider.lineColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 31,
+      "symbol": "VitalChartDataProvider.lineWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 33,
+      "symbol": "VitalChartDataProvider.isEnabledValueCircleIndicator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 35,
+      "symbol": "VitalChartDataProvider.valueCircleIndicatorRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 37,
+      "symbol": "VitalChartDataProvider.valueCircleIndicatorColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 39,
+      "symbol": "VitalChartDataProvider.vitalMaxValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 41,
+      "symbol": "VitalChartDataProvider.vitalMinValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 43,
+      "symbol": "VitalChartDataProvider.transformer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/DataProviders/VitalChartDataProvider.swift",
+      "line": 45,
+      "symbol": "VitalChartDataProvider.dequeueRealTimeData(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Handler/RealTimeDataHandler.swift",
+      "line": 54,
+      "symbol": "RealTimeDataHandler.init(dataProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Renderer/RealTimeVitalRenderer.swift",
+      "line": 50,
+      "symbol": "RealTimeVitalRenderer.init(dataProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Queue.swift",
+      "line": 18,
+      "symbol": "Queue.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Queue.swift",
+      "line": 22,
+      "symbol": "Queue.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Queue.swift",
+      "line": 26,
+      "symbol": "Queue.enqueue(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Queue.swift",
+      "line": 30,
+      "symbol": "Queue.dequeue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Queue.swift",
+      "line": 38,
+      "symbol": "Queue.clear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Queue.swift",
+      "line": 42,
+      "symbol": "Queue.front",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 18,
+      "symbol": "Transformer.offsetMatrix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 20,
+      "symbol": "Transformer.valueMatrix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 22,
+      "symbol": "Transformer.viewPortHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 24,
+      "symbol": "Transformer.init(viewPortHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 29,
+      "symbol": "Transformer.initValueMatrix(chartXMin:deltaX:deltaY:chartYMin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 39,
+      "symbol": "Transformer.initOffsetMatrix()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/Transformer.swift",
+      "line": 43,
+      "symbol": "Transformer.valueToPixelMatrix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 18,
+      "symbol": "ViewPortHandler.contentRect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 20,
+      "symbol": "ViewPortHandler.chartWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 21,
+      "symbol": "ViewPortHandler.chartHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 23,
+      "symbol": "ViewPortHandler.setChartDimens(width:height:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 33,
+      "symbol": "ViewPortHandler.setOffset(left:top:right:bottom:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 40,
+      "symbol": "ViewPortHandler.offsetLeft",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 44,
+      "symbol": "ViewPortHandler.offsetRight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 48,
+      "symbol": "ViewPortHandler.offsetTop",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 52,
+      "symbol": "ViewPortHandler.offsetBottom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 56,
+      "symbol": "ViewPortHandler.contentWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart/Sources/InfoChart/Utils/ViewPortHandler.swift",
+      "line": 60,
+      "symbol": "ViewPortHandler.contentHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/heo/iOSDev/infomining/chart/iOSInfoChart"
+}

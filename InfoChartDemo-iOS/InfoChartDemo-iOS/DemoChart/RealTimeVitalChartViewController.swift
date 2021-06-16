@@ -49,7 +49,7 @@ class RealTimeVitalChartViewController: UIViewController {
     }
     
     
-    // 화면 변화 대응
+    // 화면 변화시 차트 사이즈 변경
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         chartView.updateChartSize()

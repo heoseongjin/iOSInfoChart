@@ -8,25 +8,42 @@
 import Foundation
 import CoreGraphics
 
-
+/**
+ 실시간 데이터를 렌더링하는 객체
+ 
+ - Author: Heo
+ */
 open class RealTimeVitalRenderer {
     
-    /// 차트 데이터 프로바이더
+    /**
+     차트 데이터 프로바이더
+     */
     open var dataProvider: VitalChartDataProvider?
     
-    /// 차트 draw Pointer (index)
+    /**
+     차트 draw Pointer (index)
+     */
     open var drawPointer: Int = 0
     
-    /// 차트 remove pointer (index)
+    /**
+     차트 remove Pointer (index)
+     */
     open var removePointer: Int = 0
     
-    /// Transformer
+    /**
+     서로 다른 좌표계에서 x,y 값을 변환
+     */
     open var trans: Transformer
     
-    /// Alpha 그라데이션 비율(지워지는 영역에서 그라데이션이 차지하는 비율
+    /**
+     Alpha 그라데이션 비율
+     - 지워지는 영역에서 그라데이션이 차지하는 비율
+     */
     public let gradient_ratio = Double(0.2)
     
-    /// 전체 중 지워지는 부분의 개수
+    /**
+     전체 중 지워지는 부분의 개수
+     */
     open var removeRangeCount: Int = 0
     
     
@@ -37,7 +54,10 @@ open class RealTimeVitalRenderer {
         updateSetting()
     }
     
-    
+    /**
+     렌더링 설정값 없데이트
+     - 차트의 스펙이 변경될 경우 호출
+     */
     open func updateSetting() {
         
         guard let dataProvider = dataProvider else { return }
@@ -46,6 +66,11 @@ open class RealTimeVitalRenderer {
         removePointer = dataProvider.totalRanageCount - Int((Double(dataProvider.totalRanageCount) * (1.0 - dataProvider.refreshGraphInterval)))
     }
     
+    /**
+     배열 포인터 이동
+     - 데이터가 들어오기 전에 호출
+     - drawPointer와 removePointer 이동
+     */
     open func readyForUpdateData() {
         guard let dataProvider = dataProvider else { return }
         
@@ -60,6 +85,12 @@ open class RealTimeVitalRenderer {
         }
     }
     
+    /**
+     실시간 데이터 렌더링
+     - Parameter context: draw()를 통해 UIGraphicsGetCurrentContext()를 받아서 사용
+    
+     - Core Graphics를 통해 차트 렌더링
+     */
     open func drawLinear(context: CGContext) {
         
         guard let dataProvider = dataProvider else { return }
@@ -85,9 +116,8 @@ open class RealTimeVitalRenderer {
         for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
             firstY = dataProvider.realTimeData[x == 0 ? 0 : x - 1]
             secondY = dataProvider.realTimeData[x]
-//            removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
             
-            // change to empty data
+            // emptyData의 경우 continue
             if (firstY == -9999 || secondY == -9999){
                 continue
             }
@@ -124,13 +154,12 @@ open class RealTimeVitalRenderer {
                 context.setAlpha(1)
             }
 
+            // 차트 stroke
             context.setStrokeColor(lineColor)
             context.strokePath()
         }
         
-        
-        
-        // draw Circle Indicator
+        /// draw Circle Indicator
         if dataProvider.isEnabledValueCircleIndicator {
             let circlePoint =
                 CGPoint(x: CGFloat(drawPointer),
@@ -151,6 +180,14 @@ open class RealTimeVitalRenderer {
         }
     }
     
+    /**
+     지워지는 그라데이션 부분의 Alpha 값 계산
+     - Parameter totalCount: 지워지는 전체 Count
+     - Parameter count: 그려지는 부분 Count
+     - Returns: 전체 부분에서 그려지는 부분의 Alpha 값
+     
+     - ex) 지워질 그라데이션 전체가 100이고 현재 그려지고 있는 부분이 30이라면, 이 부분의 비율인 30%를 alpha값으로  치환하여 리턴
+     */
     private func calculateAlphaRatio(totalCount: Int, count: Int) -> CGFloat {
         let ratio = Double(count) / Double(totalCount)
         return CGFloat(ratio)

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,14 +24,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_infomining" translatesAutoresizingMaskIntoConstraints="NO" id="7sf-kd-7Gy">
-                                <rect key="frame" x="147" y="308" width="120" height="120"/>
+                                <rect key="frame" x="147" y="234.33333333333337" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="QMv-Eo-XfS"/>
                                     <constraint firstAttribute="height" constant="120" id="jHf-IN-J9r"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InfoChart Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LAv-Ia-h7e">
-                                <rect key="frame" x="148" y="432" width="118" height="19.333333333333314"/>
+                                <rect key="frame" x="148" y="358.33333333333331" width="118" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,12 +40,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LAv-Ia-h7e" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0Ec-7C-MPK"/>
                             <constraint firstItem="LAv-Ia-h7e" firstAttribute="centerX" secondItem="7sf-kd-7Gy" secondAttribute="centerX" id="B0C-zM-shs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E3W-ri-ggd" secondAttribute="bottom" constant="16" id="CHC-kv-aLk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E3W-ri-ggd" secondAttribute="trailing" id="DV2-PL-lM0"/>
-                            <constraint firstItem="7sf-kd-7Gy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S6E-R9-B9R"/>
+                            <constraint firstItem="LAv-Ia-h7e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i89-ig-9jw"/>
                             <constraint firstItem="E3W-ri-ggd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qO0-lr-EaE"/>
-                            <constraint firstItem="7sf-kd-7Gy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="qZs-Aa-icD"/>
                             <constraint firstItem="LAv-Ia-h7e" firstAttribute="top" secondItem="7sf-kd-7Gy" secondAttribute="bottom" constant="4" id="t7b-Pp-mhk"/>
                         </constraints>
                     </view>

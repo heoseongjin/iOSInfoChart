@@ -7,22 +7,21 @@
 
 import Foundation
 
-
+/**
+실시간 차트 설정 값
+ 
+ - Author: Heo
+ */
 public class Spec {
     
-    /// 1초 동안 들어오는 데이터 개수
     private var _oneSecondDataCount: Int = 500
     
-    /// 보여질 X축 범위 (초 단위)
     private var _visibleSecondRange: Int = 5
     
-    /// 새로고침 되는 그래프와 이전 그래프와의 간격
     private var _refreshGraphInterval: Double = Double(0.1)
     
-    /// 바이탈 최대 값
     private var _vitalMaxValue: Double = Double(1.5)
     
-    /// 바이탈 최소 값
     private var _vitalMinValue: Double = Double(-0.5)
     
     public init() {
@@ -37,7 +36,11 @@ public class Spec {
         self.vitalMinValue = vitalMinValue
     }
     
-    /// set oneSecondDataCount
+    /**
+    1초 동안 들어오는 데이터 개수
+     - 조건 : newValue >= 1
+     - 기본값 : 500[ea]
+     */
     open var oneSecondDataCount: Int {
         get {
             return _oneSecondDataCount
@@ -50,7 +53,11 @@ public class Spec {
         }
     }
 
-    /// set visibleSecondRange
+    /**
+     보여질 X축 범위 (초 단위)
+     - 조건 : newValue >= 2
+     - 기본값 : 5[sec]
+     */
     open var visibleSecondRange: Int {
         get {
             return _visibleSecondRange
@@ -63,7 +70,11 @@ public class Spec {
         }
     }
     
-    /// set refreshGraphInterval
+    /**
+     새로고침 되는 그래프와 이전 그래프와의 간격
+     - 조건 : 0.0 < newValue < 1.0
+     - 기본값 : 0.1 (10%)
+     */
     open var refreshGraphInterval: Double {
         get {
             return _refreshGraphInterval
@@ -76,7 +87,11 @@ public class Spec {
         }
     }
     
-    /// set vitalMaxValue
+    /**
+     바이탈 최대 값
+     - 조건 : newValue > vitalMinValue
+     - 기본값 : 1.5
+     */
     open var vitalMaxValue: Double {
         get {
             return _vitalMaxValue
@@ -89,7 +104,11 @@ public class Spec {
         }
     }
     
-    /// set vitalMinValue
+    /**
+     바이탈 최소 값
+     - 조건 : vitalMaxValue > newValue
+     - 기본값 : - 0.5
+     */
     open var vitalMinValue: Double {
         get {
             return _vitalMinValue

@@ -8,8 +8,12 @@
 import Foundation
 import CoreGraphics
 
-open class Transformer: NSObject
-{
+/**
+ 좌표 변환계
+ 
+ - Author: Heo
+ */
+open class Transformer: NSObject {
     
     internal var offsetMatrix = CGAffineTransform.identity
 
@@ -27,7 +31,6 @@ open class Transformer: NSObject
         let scaleX = (viewPortHandler.chartWidth / deltaX)
         let scaleY = (viewPortHandler.chartHeight / deltaY)
 
-        // setup all matrixes
         valueMatrix = CGAffineTransform.identity
             .scaledBy(x: scaleX, y: -scaleY)
             .translatedBy(x: CGFloat(-chartXMin), y: CGFloat(-chartYMin))

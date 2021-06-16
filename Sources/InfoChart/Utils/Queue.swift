@@ -7,6 +7,11 @@
 
 import Foundation
 
+/**
+ Queue 구현
+ 
+ - Author: Heo
+ */
 public struct Queue<T> {
     fileprivate var array = [T]()
 

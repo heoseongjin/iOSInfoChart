@@ -9,6 +9,11 @@ import Foundation
 import CoreGraphics
 import UIKit
 
+/**
+실시간 차트의 설정값 및 정보를 위한 프로토콜
+ 
+ - Author: Heo
+ */
 public protocol VitalChartDataProvider {
 
     var oneSecondDataCount: Int { get set }
@@ -24,8 +29,6 @@ public protocol VitalChartDataProvider {
     var lineColor: UIColor { get set }
     
     var lineWidth: CGFloat { get set }
-
-//    RealTimeVitalChart.LineMode getLineMode();
 
     var isEnabledValueCircleIndicator: Bool { get set }
     

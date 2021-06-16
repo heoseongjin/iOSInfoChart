@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RealTimeDataHandler Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RealTimeDataHandler" class="dashAnchor"></a>
+    <a title="RealTimeDataHandler Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (51% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RealTimeDataHandler Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RealTimeDataHandler.html">RealTimeDataHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RealTimeVitalChartView.html">RealTimeVitalChartView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RealTimeVitalRenderer.html">RealTimeVitalRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Spec.html">Spec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transformer.html">Transformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewPortHandler.html">ViewPortHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/VitalChartDataProvider.html">VitalChartDataProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Queue.html">Queue</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RealTimeDataHandler</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RealTimeDataHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>실시간 데이터를 관리하는 핸들러</p>
+
+<ul>
+<li>균일하지 못하거나 무작위로 들어오는 데이터를 Queue에 담아 일정 시간 간격으로 출력</li>
+<li><p>위상이 지연되거나 겹치는 현상을 없애고 의도된 대로 균일하게 출력할 수 있도록 구체화한 객체</p></li>
+</ul><div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Heo</p>
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC9mainQueueAA0H0VySdGvp"></a>
+                    <a name="//apple_ref/swift/Property/mainQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC9mainQueueAA0H0VySdGvp">mainQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>메인 Queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">mainQueue</span><span class="p">:</span> <span class="kt"><a href="../Structs/Queue.html">Queue</a></span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC12dataProviderAA05VitalbeH0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC12dataProviderAA05VitalbeH0_pSgvp">dataProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>차트 데이터 프로바이더</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">dataProvider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VitalChartDataProvider.html">VitalChartDataProvider</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC12defaultValueSdvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC12defaultValueSdvp">defaultValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>기본 값</p>
+
+<ul>
+<li>Queue에 데이터가 없을 경우 출력되는 값</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">defaultValue</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC9lastValueSdvp"></a>
+                    <a name="//apple_ref/swift/Property/lastValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC9lastValueSdvp">lastValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>마지막 값</p>
+
+<ul>
+<li>마지막으로 Dequeue된 값</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastValue</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC12dequeueValueSdvp"></a>
+                    <a name="//apple_ref/swift/Property/dequeueValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC12dequeueValueSdvp">dequeueValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>출력될 값</p>
+
+<ul>
+<li>출력될 값을 담는 임시 변수</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dequeueValue</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC5timerSo019OS_dispatch_source_G0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC5timerSo019OS_dispatch_source_G0_pSgvp">timer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>타이머(스케쥴러)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">timer</span><span class="p">:</span> <span class="kt">DispatchSourceTimer</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC12dataProviderAcA05VitalbeH0_p_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dataProvider:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC12dataProviderAcA05VitalbeH0_p_tcfc">init(dataProvider:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dataProvider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VitalChartDataProvider.html">VitalChartDataProvider</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC13updateSettingyyF"></a>
+                    <a name="//apple_ref/swift/Method/updateSetting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC13updateSettingyyF">updateSetting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>핸들러 설정값 업데이트</p>
+
+<ul>
+<li>차트의 스펙이 변경될 경우 호출</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateSetting</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC7enqueue5valueySd_tF"></a>
+                    <a name="//apple_ref/swift/Method/enqueue(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC7enqueue5valueySd_tF">enqueue(value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>메인 큐 Enqueue</p>
+
+<ul>
+<li><p>실시간 데이터를 메인 큐로 Enqueue하면서 스케쥴러 활성화</p></li>
+<li><p>enqueue후에 dequeue가 되도록 sync로 동작</p></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enqueue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>실시간 데이터</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC7dequeueyyF"></a>
+                    <a name="//apple_ref/swift/Method/dequeue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC7dequeueyyF">dequeue()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>메인 큐 Dequeue</p>
+
+<ul>
+<li>dequeueValue를 차트뷰로 전달</li>
+<li>enqueue후에 dequeue가 되도록 sync로 동작</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dequeue</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC3runyyF"></a>
+                    <a name="//apple_ref/swift/Method/run()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC3runyyF">run()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>스케쥴러 실행</p>
+
+<ul>
+<li>ex) 1초에 500개의 데이터를 그리는 경우, 0.002초 간격으로 데이터를 내보내는 스케쥴러 생성</li>
+<li>타이머가 활성화되어있을 경우 아무 동작 없음</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>스케쥴러 정지</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9InfoChart19RealTimeDataHandlerC5resetyyF"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9InfoChart19RealTimeDataHandlerC5resetyyF">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Queue 내부 데이터 리셋</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-06-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

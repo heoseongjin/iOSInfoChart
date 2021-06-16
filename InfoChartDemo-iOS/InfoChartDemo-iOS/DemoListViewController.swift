@@ -7,11 +7,13 @@
 
 import UIKit
 
+/// DemoList Model
 private struct ItemDef {
     let title: String
     let subtitle: String
     let `class`: AnyClass
 }
+
 
 class DemoListViewController: UIViewController {
     
@@ -29,6 +31,8 @@ class DemoListViewController: UIViewController {
 
 }
 
+
+// MARK: - TableView
 extension DemoListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
