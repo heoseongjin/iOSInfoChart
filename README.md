@@ -2,7 +2,7 @@
 
 ![badge](https://img.shields.io/badge/iOS-10.0+-lightgray.svg?style=flat)
 ![badge](https://img.shields.io/badge/language-Swift-orange.svg?style=flat)
-![badge](https://img.shields.io/badge/version-v1.1.0-blue.svg)
+![badge](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 
 # InfoCharts-iOS
 
@@ -98,4 +98,4 @@ ECG, PPG 등의 `실시간 생체 신호`를 표시해주는 차트입니다.
 
 # 3. Documentaion
 
-- SDK에 대한 상세한 정보는 여기 문서를 통해 확인하실 수 있습니다.
+- SDK에 대한 상세한 정보는 [여기 문서](https://infodevelop.github.io/iOSInfoChart/)를 통해 확인하실 수 있습니다.
