@@ -20,7 +20,7 @@ public protocol VitalChartDataProvider {
 
     var visibleSecondRange: Int { get }
 
-    var totalRanageCount: Int { get }
+    var totalRangeCount: Int { get }
     
     var refreshGraphInterval: Double { get }
     

@@ -228,7 +228,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
     /**
      보여질 전체 데이터 개수
      */
-    public var totalRanageCount: Int {
+    public var totalRangeCount: Int {
         spec.oneSecondDataCount * spec.visibleSecondRange
     }
     

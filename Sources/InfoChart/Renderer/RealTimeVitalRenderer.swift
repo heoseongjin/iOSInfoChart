@@ -63,7 +63,7 @@ open class RealTimeVitalRenderer {
         guard let dataProvider = dataProvider else { return }
         
         drawPointer = 0
-        removePointer = dataProvider.totalRanageCount - Int((Double(dataProvider.totalRanageCount) * (1.0 - dataProvider.refreshGraphInterval)))
+        removePointer = dataProvider.totalRangeCount - Int((Double(dataProvider.totalRangeCount) * (1.0 - dataProvider.refreshGraphInterval)))
     }
     
     /**
@@ -77,10 +77,10 @@ open class RealTimeVitalRenderer {
         drawPointer += 1
         removePointer += 1
         
-        if drawPointer >= dataProvider.totalRanageCount {
+        if drawPointer >= dataProvider.totalRangeCount {
             drawPointer = 0
         }
-        if removePointer >= dataProvider.totalRanageCount {
+        if removePointer >= dataProvider.totalRangeCount {
             removePointer = 0
         }
     }
@@ -111,7 +111,7 @@ open class RealTimeVitalRenderer {
         
         removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
         
-        for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
+        for x in stride(from: 1, to: dataProvider.totalRangeCount, by: 1) {
             firstY = dataProvider.realTimeData[x == 0 ? 0 : x - 1]
             secondY = dataProvider.realTimeData[x]
             
