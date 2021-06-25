@@ -217,18 +217,30 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
         addRealTimeData(value: value)
     }
     
-    public lazy var oneSecondDataCount = spec.oneSecondDataCount
+    public var oneSecondDataCount: Int {
+        spec.oneSecondDataCount
+    }
     
-    public lazy var visibleSecondRange = spec.visibleSecondRange
-    
+    public var visibleSecondRange: Int {
+        spec.visibleSecondRange
+    }
+        
     /**
      보여질 전체 데이터 개수
      */
-    public lazy var totalRanageCount = oneSecondDataCount * visibleSecondRange
+    public var totalRangeCount: Int {
+        spec.oneSecondDataCount * spec.visibleSecondRange
+    }
     
-    public lazy var refreshGraphInterval = spec.refreshGraphInterval
+    public var refreshGraphInterval: Double {
+        spec.refreshGraphInterval
+    }
     
-    public lazy var vitalMaxValue = spec.vitalMaxValue
+    public var vitalMaxValue: Double {
+        spec.vitalMaxValue
+    }
     
-    public lazy var vitalMinValue = spec.vitalMinValue
+    public var vitalMinValue: Double {
+        spec.vitalMinValue
+    }
 }

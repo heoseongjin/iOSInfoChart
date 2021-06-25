@@ -16,13 +16,17 @@ import UIKit
  */
 public protocol VitalChartDataProvider {
 
-    var oneSecondDataCount: Int { get set }
+    var oneSecondDataCount: Int { get }
 
-    var visibleSecondRange: Int { get set }
+    var visibleSecondRange: Int { get }
 
-    var totalRanageCount: Int { get set }
+    var totalRangeCount: Int { get }
     
-    var refreshGraphInterval: Double { get set }
+    var refreshGraphInterval: Double { get }
+    
+    var vitalMaxValue: Double { get }
+
+    var vitalMinValue: Double { get }
     
     var realTimeData: [Double] { get set }
     
@@ -35,10 +39,6 @@ public protocol VitalChartDataProvider {
     var valueCircleIndicatorRadius: Double { get set }
 
     var valueCircleIndicatorColor: UIColor { get set }
-    
-    var vitalMaxValue: Double { get set }
-
-    var vitalMinValue: Double { get set }
     
     var transformer: Transformer? { get set }
     
