@@ -2,7 +2,7 @@
 
 ![badge](https://img.shields.io/badge/iOS-10.0+-lightgray.svg?style=flat)
 ![badge](https://img.shields.io/badge/language-Swift-orange.svg?style=flat)
-![badge](https://img.shields.io/badge/version-v1.0.0-blue.svg)
+![badge](https://img.shields.io/badge/version-v1.0.1-blue.svg)
 
 # InfoCharts-iOS
 
