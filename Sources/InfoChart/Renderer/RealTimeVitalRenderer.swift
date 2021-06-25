@@ -109,8 +109,6 @@ open class RealTimeVitalRenderer {
         var firstY: Double
         var secondY: Double
         
-        var rect = CGRect()
-        
         removeRangeCount = (drawPointer < removePointer) ? removePointer - drawPointer : removePointer
         
         for x in stride(from: 1, to: dataProvider.totalRanageCount, by: 1) {
@@ -120,10 +118,6 @@ open class RealTimeVitalRenderer {
             // emptyData의 경우 continue
             if (firstY == -9999 || secondY == -9999){
                 continue
-            }
-            
-            DispatchQueue.global(qos: .userInteractive).sync{
-                
             }
 
             let path = CGMutablePath()
@@ -161,6 +155,9 @@ open class RealTimeVitalRenderer {
         
         /// draw Circle Indicator
         if dataProvider.isEnabledValueCircleIndicator {
+            
+            var rect = CGRect()
+            
             let circlePoint =
                 CGPoint(x: CGFloat(drawPointer),
                         y: CGFloat(dataProvider.realTimeData[drawPointer]))
