@@ -191,9 +191,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
      그려진 실시간 데이터 삭제
      */
     private func resetRealTimeData() {
-        for i in 0..<realTimeData.count {
-            realTimeData[i] = EMPTY_DATA
-        }
+        realTimeData = realTimeData.map { _ in EMPTY_DATA }
     }
     
     /**
