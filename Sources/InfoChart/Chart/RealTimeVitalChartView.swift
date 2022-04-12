@@ -103,6 +103,8 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
      차트 선의 색상 및 두께 등 렌더링 정보 초기화와 Transformer, 렌더링 객체, 데이터 핸들러를 할당.
      */
     private func initialize() {
+        backgroundColor = .white
+        
         lineColor = UIColor.red
         lineWidth = CGFloat(1.5)
         
@@ -191,9 +193,7 @@ open class RealTimeVitalChartView: UIView, VitalChartDataProvider {
      그려진 실시간 데이터 삭제
      */
     private func resetRealTimeData() {
-        for i in 0..<realTimeData.count {
-            realTimeData[i] = EMPTY_DATA
-        }
+        realTimeData = realTimeData.map { _ in EMPTY_DATA }
     }
     
     /**

@@ -155,6 +155,10 @@ open class RealTimeVitalRenderer {
         
         /// draw Circle Indicator
         if dataProvider.isEnabledValueCircleIndicator {
+            // TODO: 차트 초기화 시 CircleIndicator가 유지되어 보이는 현상 해결 필요(임시방편으로 초기에는 Indicator가 안그려지도록 수정)
+            if drawPointer < 5 {
+                return
+            }
             
             var rect = CGRect()
             
