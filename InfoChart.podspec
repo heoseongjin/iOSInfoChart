@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "InfoChart"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "Awesome Charts for iOS. It's supported real time vital chart like ECG."
   spec.homepage     = "https://github.com/infodevelop/iOSInfoChart"
   spec.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
-  spec.author             = { "infodevelop" => "hsj02036@infomining.co.kr" }
+  spec.author             = { "infodevelop" => "lucasheo.develop@gmail.com" }
   spec.ios.deployment_target = "10.0"
   spec.swift_version = '5.0'
   spec.source       = { :git => "https://github.com/infodevelop/iOSInfoChart.git", :tag => "v#{spec.version}" }

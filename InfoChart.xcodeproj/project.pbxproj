@@ -16,6 +16,7 @@
 		BFD068282677465500D18ACD /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0681D2677465500D18ACD /* ViewPortHandler.swift */; };
 		BFD068292677465500D18ACD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0681E2677465500D18ACD /* Queue.swift */; };
 		BFD0682B2677465500D18ACD /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD068222677465500D18ACD /* Spec.swift */; };
+		BFF9119A2807AAC300751BE1 /* InfoChart.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BFF911992807AAC300751BE1 /* InfoChart.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BFD0681D2677465500D18ACD /* ViewPortHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPortHandler.swift; sourceTree = "<group>"; };
 		BFD0681E2677465500D18ACD /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		BFD068222677465500D18ACD /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
+		BFF911992807AAC300751BE1 /* InfoChart.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InfoChart.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		BFD067E12677451800D18ACD = {
 			isa = PBXGroup;
 			children = (
+				BFF911992807AAC300751BE1 /* InfoChart.podspec */,
 				BFD067EC2677451800D18ACD /* Products */,
 				BFD068122677465500D18ACD /* Sources */,
 			);
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF9119A2807AAC300751BE1 /* InfoChart.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
