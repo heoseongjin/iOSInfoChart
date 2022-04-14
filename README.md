@@ -2,7 +2,7 @@
 
 ![badge](https://img.shields.io/badge/iOS-10.0+-lightgray.svg?style=flat)
 ![badge](https://img.shields.io/badge/language-Swift-orange.svg?style=flat)
-![badge](https://img.shields.io/badge/version-v1.0.1-blue.svg)
+[![Latest pod release](https://img.shields.io/cocoapods/v/InfoChart.svg)](http://cocoapods.org/pods/InfoChart)
 
 # InfoCharts-iOS
 
